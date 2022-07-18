@@ -1,5 +1,6 @@
 package com.example.ontime
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,5 +17,15 @@ class SchedulePageFragment : Fragment() {
     ): View {
         binding = FragmentSchedulePageBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    // change Calender Attribute
+    @SuppressLint("ResourceAsColor")
+    private fun customCalender() {
+        binding.cvDate.apply {
+            setBackgroundColor(R.color.white)
+
+        }
+
     }
 }
