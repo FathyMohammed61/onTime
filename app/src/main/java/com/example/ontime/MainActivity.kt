@@ -3,6 +3,8 @@ package com.example.ontime
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.ontime.Fragments.LoginAppFragment
+import com.example.ontime.Fragments.SchedulePageFragment
 import com.example.ontime.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
