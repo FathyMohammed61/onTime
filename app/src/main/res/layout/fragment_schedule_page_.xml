@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cv_date" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcItem"
+        android:id="@+id/rv_todos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -80,10 +80,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:reverseLayout="false"
         app:layout_constraintTop_toBottomOf="@+id/cv_date"
- />
+        app:stackFromEnd="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

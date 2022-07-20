@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ontime.DataClasses.ItemWithCardData
 import com.example.ontime.R
 
-class ItemWithCardAdaptor(private val itemWithCardViewItemList: ArrayList<ItemWithCardData>) :
+class ItemWithCardAdaptor(private val itemWithCardViewItemList: List<ItemWithCardData>) :
     RecyclerView.Adapter<ItemWithCardAdaptor.MyItemWithCardViewHolder>() {
     inner class MyItemWithCardViewHolder(item: View) : RecyclerView.ViewHolder(item)
 
