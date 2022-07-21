@@ -23,8 +23,9 @@ class LoginAppFragment : Fragment() {
 
     private fun goToSchedule1() {
         binding.btnStart.setOnClickListener {
-            val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.flFrame, SchedulePageFragment()).commit()
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flFrame, SchedulePageFragment()).commit()
+            }
         }
     }
 
