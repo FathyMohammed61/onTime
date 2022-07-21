@@ -29,11 +29,10 @@ class SchedulePageFragment : Fragment() {
     ): View {
         binding = FragmentSchedulePageBinding.inflate(inflater, container, false)
         myCardItem()
-         customCalender()
+        customCalender()
 
         return binding.root
     }
-
 
     @SuppressLint("ResourceType")
     private fun customCalender() {
@@ -42,10 +41,9 @@ class SchedulePageFragment : Fragment() {
         }
     }
 
-
     private fun myCardItem() {
         val adaptor = ItemWithCardAdaptor(item)
-        binding.rcItem.layoutManager = LinearLayoutManager(activity as MainActivity)
+        binding.rvItem.layoutManager = LinearLayoutManager(activity as MainActivity)
         adaptor.notifyItemInserted(item.size - 1)
     }
 }

@@ -21,11 +21,10 @@ class LoginAppFragment : Fragment() {
         return binding.root
     }
 
-
     private fun goToSchedule1() {
         binding.btnStart.setOnClickListener {
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.flFrame, SchedulePageFragment())?.commit()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.flFrame, SchedulePageFragment()).commit()
         }
     }
 
