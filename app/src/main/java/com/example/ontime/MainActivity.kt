@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setTheme(R.style.Theme_OnTime)
-        setCurrentFragment(loginAppFragment)
+        setCurrentFragment(SchedulePageFragment())
     }
 
     private fun setCurrentFragment(fragment: Fragment) {

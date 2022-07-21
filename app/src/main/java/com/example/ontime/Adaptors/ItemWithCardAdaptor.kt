@@ -18,7 +18,6 @@ class ItemWithCardAdaptor(private val itemWithCardViewItemList: List<ItemWithCar
         return MyItemWithCardViewHolder(view)
     }
 
-
     override fun onBindViewHolder(holder: MyItemWithCardViewHolder, position: Int) {
         val positionItem = itemWithCardViewItemList[position]
         val titleHeader: TextView = holder.itemView.findViewById(R.id.todoHeader)
