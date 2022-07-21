@@ -28,6 +28,4 @@ class LoginAppFragment : Fragment() {
             }
         }
     }
-
-
 }
