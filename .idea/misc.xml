@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/FathyMohamed/Documents/GitHub/onTime/app/src/main/res/drawable/back_ground_layout.xml" value="0.1675" />
+        <entry key="..\:/Users/FathyMohamed/Documents/GitHub/onTime/app/src/main/res/drawable/card_background.xml" value="0.1675" />
         <entry key="..\:/Users/FathyMohamed/Documents/GitHub/onTime/app/src/main/res/layout/fragment_ligin_app.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/FathyMohamed/Documents/GitHub/onTime/app/src/main/res/layout/fragment_schedule_page_.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/FathyMohamed/Documents/GitHub/onTime/app/src/main/res/layout/item_with_card.xml" value="0.27291666666666664" />

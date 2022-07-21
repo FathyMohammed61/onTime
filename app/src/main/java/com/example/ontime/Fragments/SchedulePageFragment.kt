@@ -1,5 +1,6 @@
 package com.example.ontime.Fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ontime.Adaptors.ItemWithCardAdaptor
 import com.example.ontime.DataClasses.ItemWithCardData
-import com.example.ontime.MainActivity
+import com.example.ontime.R
 import com.example.ontime.databinding.FragmentSchedulePageBinding
 
 
@@ -22,26 +23,41 @@ class SchedulePageFragment : Fragment() {
     ): View {
         binding = FragmentSchedulePageBinding.inflate(inflater, container, false)
         myCardItem()
-//        customCalender()
+        customCalender()
 
         return binding.root
     }
 
-    //    @SuppressLint("ResourceType")
-//    private fun customCalender() {
-//        binding.cvDate.apply {
-//            rootView.setBackgroundColor(R.color.black)
-//        }
-//    }
+    @SuppressLint("ResourceType")
+    private fun customCalender() {
+        binding.cvDate.apply {
+            rootView.setBackgroundColor(R.color.black)
+        }
+    }
+
     private fun myCardItem() {
         val item = arrayListOf(
-            ItemWithCardData("me", " 4:55pm", "250", "cairo")
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
         )
         val adaptor = ItemWithCardAdaptor(item)
-        ///////// //////////////////////// ///////////
         // don't forget the adaptor again
         binding.rvItem.adapter = adaptor
-        binding.rvItem.layoutManager = LinearLayoutManager(activity as MainActivity)
-        adaptor.notifyItemInserted(item.size - 1)
+        binding.rvItem.layoutManager =
+            LinearLayoutManager(activity)
+        adaptor.notifyItemInserted(item.size -1)
     }
 }
