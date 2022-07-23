@@ -24,7 +24,6 @@ class SchedulePageFragment : Fragment() {
         binding = FragmentSchedulePageBinding.inflate(inflater, container, false)
         myCardItem()
         customCalender()
-
         return binding.root
     }
 
@@ -37,17 +36,6 @@ class SchedulePageFragment : Fragment() {
 
     private fun myCardItem() {
         val item = arrayListOf(
-            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
             ItemWithCardData("me", " 4:55pm", "250", "cairo"),
             ItemWithCardData("me", " 4:55pm", "250", "cairo"),
             ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
