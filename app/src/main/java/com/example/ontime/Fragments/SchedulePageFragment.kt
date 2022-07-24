@@ -1,6 +1,5 @@
 package com.example.ontime.Fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -15,6 +14,7 @@ import com.example.ontime.DataClasses.ItemWithCardData
 import com.example.ontime.R
 import com.example.ontime.databinding.FragmentSchedulePageBinding
 
+@Suppress("DEPRECATION")
 
 class SchedulePageFragment : Fragment() {
 
@@ -28,30 +28,27 @@ class SchedulePageFragment : Fragment() {
     ): View {
         binding = FragmentSchedulePageBinding.inflate(inflater, container, false)
         myCardItem()
-        customCalender()
+
         return binding.root
     }
 
-    @SuppressLint("ResourceType")
-    private fun customCalender() {
-        binding.cvDate.apply {
-            rootView.setBackgroundColor(R.color.black)
-        }
-    }
 
     private fun myCardItem() {
         val item = arrayListOf<ItemWithCardData>(
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
-//            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
         )
         val clToast: ConstraintLayout? = view?.findViewById(R.id.clToast)
 
         if (item.isEmpty()) {
             Toast(context).apply {
                 duration = Toast.LENGTH_LONG
-                view = layoutInflater.inflate(R.layout.if_item_null, clToast)
+                layoutInflater.inflate(R.layout.if_item_null, clToast).also {
+
+                    view = it
+                }
                 setGravity(Gravity.AXIS_SPECIFIED, 0, 0)
                 show()
             }
