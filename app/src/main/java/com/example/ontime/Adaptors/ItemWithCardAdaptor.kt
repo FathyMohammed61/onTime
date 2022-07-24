@@ -3,6 +3,7 @@ package com.example.ontime.Adaptors
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ontime.DataClasses.ItemWithCardData
@@ -24,13 +25,13 @@ class ItemWithCardAdaptor(private val itemWithCardViewItemList: List<ItemWithCar
         val selectedTime: TextView = holder.itemView.findViewById(R.id.selectedTime)
         val selectedPlace: TextView = holder.itemView.findViewById(R.id.selectedPlace)
         val selectedNotes: TextView = holder.itemView.findViewById(R.id.selectedNotes)
-
+        val isChecked: CheckBox = holder.itemView.findViewById(R.id.cb_check)
         holder.itemId.apply {
             titleHeader.text = positionItem.titleHeader
             selectedTime.text = positionItem.selectedTime
             selectedPlace.text = positionItem.selectedPlace
             selectedNotes.text = positionItem.selectedNotes
-
+            isChecked.isChecked = positionItem.isChecked
         }
     }
 

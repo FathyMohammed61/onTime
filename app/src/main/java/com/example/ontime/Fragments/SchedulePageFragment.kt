@@ -41,10 +41,10 @@ class SchedulePageFragment : Fragment() {
 
     private fun myCardItem() {
         val item = arrayListOf<ItemWithCardData>(
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
-            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds"),
-            ItemWithCardData("me", " 4:55pm", "250", "cairo"),
+//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+//            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+//            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
         )
         val clToast: ConstraintLayout? = view?.findViewById(R.id.clToast)
 
@@ -52,7 +52,7 @@ class SchedulePageFragment : Fragment() {
             Toast(context).apply {
                 duration = Toast.LENGTH_LONG
                 view = layoutInflater.inflate(R.layout.if_item_null, clToast)
-                 setGravity(Gravity.AXIS_SPECIFIED,0,0)
+                setGravity(Gravity.AXIS_SPECIFIED, 0, 0)
                 show()
             }
         }
@@ -61,7 +61,6 @@ class SchedulePageFragment : Fragment() {
         binding.rvItem.layoutManager =
             LinearLayoutManager(activity)
         adaptor.notifyItemInserted(item.size - 1)
-
 
 
     }

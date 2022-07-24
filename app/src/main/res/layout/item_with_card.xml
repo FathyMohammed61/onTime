@@ -35,6 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <CheckBox
+            android:id="@+id/cb_check"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:checked="false"

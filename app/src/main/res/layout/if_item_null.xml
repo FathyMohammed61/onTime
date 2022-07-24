@@ -10,8 +10,7 @@
         android:id="@+id/whenItemsNUll"
         android:layout_width="284dp"
         android:layout_height="45dp"
-
-        android:background="@color/purple_500"
+        android:background="@drawable/card_background"
         android:gravity="center"
         android:text="You Don't have any notes"
         android:textColor="@color/white"

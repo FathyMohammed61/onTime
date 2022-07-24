@@ -5,4 +5,5 @@ data class ItemWithCardData(
     val selectedTime: String,
     val selectedPlace: String,
     val selectedNotes: String,
+    val isChecked: Boolean,
 )
