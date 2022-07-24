@@ -11,8 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/shr_logo"
         android:supportsRtl="true"
-        android:theme="@style/splashScreen"
+        android:theme="@style/Theme.OnTime"
         tools:targetApi="31">
+        <activity
+            android:name=".ScheduleActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

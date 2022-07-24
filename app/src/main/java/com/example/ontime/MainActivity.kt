@@ -1,29 +1,28 @@
 package com.example.ontime
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import com.example.ontime.Fragments.LoginAppFragment
-import com.example.ontime.Fragments.SchedulePageFragment
 import com.example.ontime.databinding.ActivityMainBinding
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    var loginAppFragment = LoginAppFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setTheme(R.style.Theme_OnTime)
-        setCurrentFragment(loginAppFragment)
+        delay()
     }
 
-    private fun setCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFrame, fragment)
-            commit()
-        }
+    private fun delay() {
+        Thread(Runnable {
+            Thread.sleep(1000)
+
+            Intent(this, ScheduleActivity::class.java).also {
+                startActivity(it)
+            }
+        }).run()
     }
 }

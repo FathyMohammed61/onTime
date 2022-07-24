@@ -12,9 +12,5 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="splashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_layout</item>
-        <item name="android:statusBarColor">@color/purple_500</item>
 
-    </style>
 </resources>
