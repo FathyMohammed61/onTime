@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/back_ground_layout"
     tools:context=".ScheduleActivity">
-
-
     <FrameLayout
         android:id="@+id/flFrame"
         android:layout_width="match_parent"

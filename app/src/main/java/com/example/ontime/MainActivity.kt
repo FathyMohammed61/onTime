@@ -18,8 +18,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun delay() {
         Thread(Runnable {
-            Thread.sleep(1000)
-
+            try {
+                Thread.sleep(1000)
+            } catch (e: Exception) {
+                println(e.toString())
+            }
             Intent(this, ScheduleActivity::class.java).also {
                 startActivity(it)
             }
