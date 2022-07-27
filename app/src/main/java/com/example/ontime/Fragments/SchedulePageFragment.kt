@@ -39,6 +39,14 @@ class SchedulePageFragment : Fragment() {
             ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
             ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
             ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
         )
         val clToast: ConstraintLayout? = view?.findViewById(R.id.clToast)
 
