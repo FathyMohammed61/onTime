@@ -14,12 +14,10 @@ import com.example.ontime.DataClasses.ItemWithCardData
 import com.example.ontime.R
 import com.example.ontime.databinding.FragmentSchedulePageBinding
 
-@Suppress("DEPRECATION")
 
 class SchedulePageFragment : Fragment() {
 
     private lateinit var binding: FragmentSchedulePageBinding
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,10 +26,9 @@ class SchedulePageFragment : Fragment() {
     ): View {
         binding = FragmentSchedulePageBinding.inflate(inflater, container, false)
         myCardItem()
-
+        navToAddTaskFragment()
         return binding.root
     }
-
 
     private fun myCardItem() {
         val item = arrayListOf<ItemWithCardData>(
@@ -49,15 +46,13 @@ class SchedulePageFragment : Fragment() {
             ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
         )
         val clToast: ConstraintLayout? = view?.findViewById(R.id.clToast)
-
         if (item.isEmpty()) {
             Toast(context).apply {
                 duration = Toast.LENGTH_LONG
                 layoutInflater.inflate(R.layout.if_item_null, clToast).also {
-
                     view = it
                 }
-                setGravity(Gravity.AXIS_SPECIFIED, 0, 0)
+                setGravity(Gravity.CENTER, 0, 0)
                 show()
             }
         }
@@ -66,7 +61,17 @@ class SchedulePageFragment : Fragment() {
         binding.rvItem.layoutManager =
             LinearLayoutManager(activity)
         adaptor.notifyItemInserted(item.size - 1)
+    }
 
+    private fun navToAddTaskFragment() {
+        binding.fabNavToAddTask.setOnClickListener {
+            // startActivity(Intent(activity as Context, AddTaskFragment::class.java))
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flFrame, AddTaskFragment())
+                    .addToBackStack("null")
+                    .commit()
+            }
+        }
 
     }
 }

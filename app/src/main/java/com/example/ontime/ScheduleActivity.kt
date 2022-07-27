@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.ontime.Fragments.AddTaskFragment
 import com.example.ontime.Fragments.LoginAppFragment
+import com.example.ontime.Fragments.SchedulePageFragment
 import com.example.ontime.databinding.ActivityScheduleBinding
 
 class ScheduleActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class ScheduleActivity : AppCompatActivity() {
         binding = ActivityScheduleBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setCurrentFragment(loginAppFragment)
+        setCurrentFragment(SchedulePageFragment())
     }
 
     private fun setCurrentFragment(fragment: Fragment) {

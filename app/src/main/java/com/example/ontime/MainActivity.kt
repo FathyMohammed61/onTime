@@ -1,8 +1,8 @@
 package com.example.ontime
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ontime.Fragments.SplashFragment
 import com.example.ontime.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,19 +13,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        delay()
+
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flMain, SplashFragment())
+                .commit()
+        }
+
     }
 
-    private fun delay() {
-        Thread(Runnable {
-            try {
-                Thread.sleep(1000)
-            } catch (e: Exception) {
-                println(e.toString())
-            }
-            Intent(this, ScheduleActivity::class.java).also {
-                startActivity(it)
-            }
-        }).run()
-    }
+
+
+
 }
