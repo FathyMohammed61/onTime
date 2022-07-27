@@ -65,9 +65,8 @@ class SchedulePageFragment : Fragment() {
 
     private fun navToAddTaskFragment() {
         binding.fabNavToAddTask.setOnClickListener {
-            // startActivity(Intent(activity as Context, AddTaskFragment::class.java))
             parentFragmentManager.beginTransaction().apply {
-                replace(R.id.flFrame, AddTaskFragment())
+                replace(R.id.flMain, AddTaskFragment())
                     .addToBackStack("null")
                     .commit()
             }

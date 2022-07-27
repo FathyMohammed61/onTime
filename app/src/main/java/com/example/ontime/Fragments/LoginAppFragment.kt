@@ -24,7 +24,9 @@ class LoginAppFragment : Fragment() {
     private fun goToSchedule1() {
         binding.btnStart.setOnClickListener {
             parentFragmentManager.beginTransaction().apply {
-                replace(R.id.flFrame, SchedulePageFragment()).commit()
+                replace(R.id.flFrame, SchedulePageFragment())
+                remove(this@LoginAppFragment)
+                    .commit()
             }
         }
     }

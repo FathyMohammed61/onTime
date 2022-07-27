@@ -22,7 +22,6 @@ class SplashFragment : Fragment() {
         return binding.root
     }
 
-
     private fun delay() {
         Thread {
             try {

@@ -26,6 +26,8 @@ class ItemWithCardAdaptor(private val itemWithCardViewItemList: List<ItemWithCar
         val selectedPlace: TextView = holder.itemView.findViewById(R.id.selectedPlace)
         val selectedNotes: TextView = holder.itemView.findViewById(R.id.selectedNotes)
         val isChecked: CheckBox = holder.itemView.findViewById(R.id.cb_check)
+
+
         holder.itemId.apply {
             titleHeader.text = positionItem.titleHeader
             selectedTime.text = positionItem.selectedTime
