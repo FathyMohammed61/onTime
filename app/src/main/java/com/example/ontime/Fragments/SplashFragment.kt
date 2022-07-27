@@ -11,7 +11,7 @@ import com.example.ontime.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
 
-    lateinit var binding: FragmentSplashBinding
+    private lateinit var binding: FragmentSplashBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,7 +24,7 @@ class SplashFragment : Fragment() {
 
 
     private fun delay() {
-        Thread(Runnable {
+        Thread {
             try {
                 Thread.sleep(2000)
             } catch (e: Exception) {
@@ -35,7 +35,7 @@ class SplashFragment : Fragment() {
                 remove(this@SplashFragment)
                     .commit()
             }
-        }).run()
+        }.run()
     }
 
 }
