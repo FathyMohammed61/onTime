@@ -97,6 +97,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
+        android:id="@+id/cb_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -109,6 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createTask"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="144dp"
