@@ -38,7 +38,6 @@ class SchedulePageFragment : Fragment() {
     val checkRemember: CheckBox? = view?.findViewById(R.id.cb_remember)
 
 
-
     val addedText = Intent().getStringExtra("addText").toString()
     val addedDate = Intent().getStringExtra("addDate").toString()
     val addedNotes = Intent().getStringExtra("addNotes").toString()
@@ -60,20 +59,19 @@ class SchedulePageFragment : Fragment() {
 
     private fun myCardItem() {
 
-
         val item = arrayListOf<ItemWithCardData>(
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
-//            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
-//            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
-//            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
-//            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", false),
+            ItemWithCardData("ewewewewe", " 4:55pm", "250", "sdsdfdfdfds", true),
+            ItemWithCardData("me", " 4:55pm", "250", "cairo", true),
 
             )
 
